@@ -8,7 +8,7 @@ ENV CATALINA_HOME=$LIFERAY_HOME/tomcat-9.0.17 \
   LIFERAY_CONFIG_DIR=/tmp/liferay/configs \
   LIFERAY_DEPLOY_DIR=/tmp/liferay/deploy \
   LIFERAY_SHARED=/storage/liferay \
-  LIFERAY_TOMCAT_URL=https://sourceforge.net/projects/lportal/files/Liferay%20Portal/7.2.0%20GA1/liferay-ce-portal-tomcat-7.2.0-ga1-20190531153709761.tar.gz/download
+  LIFERAY_TOMCAT_URL=https://cdn.lfrs.sl/releases.liferay.com/portal/7.2.0-ga1/liferay-ce-portal-tomcat-7.2.0-ga1-20190531153709761.tar.gz
 
 ENV GOSU_URL=https://github.com/tianon/gosu/releases/download/$GOSU_VERSION \
   GOSU_KEY=B42F6819007F00F88E364FD4036A9C25BF357DD4 \
