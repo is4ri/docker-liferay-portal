@@ -132,7 +132,7 @@ prepare_liferay_tomcat_config() {
   by Tomcat:
   "
   if [[ ! -d "$CATALINA_HOME/shared/lib" ]]; then
-    mkdir $CATALINA_HOME/shared/lib
+    mkdir -p $CATALINA_HOME/shared/lib
   fi
 
   for jar in $LIFERAY_CONFIG_DIR/sharedlib/*.jar; do
