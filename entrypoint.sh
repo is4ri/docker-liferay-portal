@@ -128,6 +128,19 @@ prepare_liferay_tomcat_config() {
 
   cp -r $LIFERAY_CONFIG_DIR/setenv.sh $CATALINA_HOME/bin/setenv.sh
 
+  echo "The following libraries are going to be shared
+  by Tomcat:
+  "
+  if [[ ! -d "$CATALINA_HOME/shared/lib" ]]; then
+    mkdir $CATALINA_HOME/shared/lib
+  fi
+
+  for jar in $LIFERAY_CONFIG_DIR/sharedlib/*.jar; do
+    [ -e "$jar" ] && cp $LIFERAY_CONFIG_DIR/sharedlib/*.jar $CATALINA_HOME/shared/lib
+    break
+  done
+
+
   echo "
   Continuing.
   "
